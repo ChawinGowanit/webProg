@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'ex2/loop'
   get 'main/abc'
   get 'main/xyz'
   get 'main/welcome'
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
   get "YM" , to: "main#xyz"
   get "welcome" , to: "main#welcome"
   get "contact_us", to: "main#contact"
+  get "loop", to: "ex2#loop"
 end
