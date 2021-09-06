@@ -1,0 +1,15 @@
+<h1>User's Posts</h1>
+
+ 
+<% if (!@userPosts) %>
+	<strong> INVALID USER ID</strong> 
+<% else %>
+	<% u = @userPosts.posts %>
+	<strong> Posts count </strong> <%= u.count %>
+	</br></br>
+	<%	u.each do |post| %>
+		<strong>Message:</strong> 	<%= post.msg %>	<strong> Created At: </strong> <%= post.created_at %>
+	</br>
+	<% end %>
+<% end %>
+
